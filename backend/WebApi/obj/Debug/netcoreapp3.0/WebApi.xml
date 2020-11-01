@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:WebApi.testResponse.Client.ApiQuizQuestionsids">
+            <summary>Получить рандомные номера вопросов</summary>
+            <returns>Возвращаем ответ</returns>
+            <exception cref="T:WebApi.testResponse.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:WebApi.testResponse.Client.ApiQuizQuestionsidsAsync(System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Получить рандомные номера вопросов</summary>
+            <returns>Возвращаем ответ</returns>
+            <exception cref="T:WebApi.testResponse.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:WebApi.testResponse.Client.ApiQuizNext(System.Nullable{System.Int32})">
+            <summary>Следующий вопрос</summary>
+            <param name="questionId">id вопроса</param>
+            <returns>Возвращает Json</returns>
+            <exception cref="T:WebApi.testResponse.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:WebApi.testResponse.Client.ApiQuizNextAsync(System.Nullable{System.Int32},System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Следующий вопрос</summary>
+            <param name="questionId">id вопроса</param>
+            <returns>Возвращает Json</returns>
+            <exception cref="T:WebApi.testResponse.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:WebApi.testResponse.Client.ApiQuizAnswer(System.String)">
+            <summary>Принять ответ</summary>
+            <param name="previousQuestionAnswer">{'Question':'2+2?','Answer':"4"}</param>
+            <returns>Возвращаем ответ</returns>
+            <exception cref="T:WebApi.testResponse.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:WebApi.testResponse.Client.ApiQuizAnswerAsync(System.String,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Принять ответ</summary>
+            <param name="previousQuestionAnswer">{'Question':'2+2?','Answer':"4"}</param>
+            <returns>Возвращаем ответ</returns>
+            <exception cref="T:WebApi.testResponse.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:WebApi.testResponse.Client.ApiQuizComplete(System.String)">
+            <summary>Возвращает % результат</summary>
+            <param name="answers">Пример [true, false, ...]</param>
+            <returns>Процент</returns>
+            <exception cref="T:WebApi.testResponse.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:WebApi.testResponse.Client.ApiQuizCompleteAsync(System.String,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Возвращает % результат</summary>
+            <param name="answers">Пример [true, false, ...]</param>
+            <returns>Процент</returns>
+            <exception cref="T:WebApi.testResponse.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:WebApi.testResponse.Client.UserAuthenticate(WebApi.testResponse.User)">
+            <summary>Авторизация</summary>
+            <param name="body">Код доступа</param>
+            <returns>Success</returns>
+            <exception cref="T:WebApi.testResponse.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:WebApi.testResponse.Client.UserAuthenticateAsync(WebApi.testResponse.User,System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Авторизация</summary>
+            <param name="body">Код доступа</param>
+            <returns>Success</returns>
+            <exception cref="T:WebApi.testResponse.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:WebApi.testResponse.Client.ApiAbracadabraTestStart">
+            <summary>Запрос пользователя</summary>
+            <returns>Success</returns>
+            <exception cref="T:WebApi.testResponse.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:WebApi.testResponse.Client.ApiAbracadabraTestStartAsync(System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>Запрос пользователя</summary>
+            <returns>Success</returns>
+            <exception cref="T:WebApi.testResponse.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:WebApi.testResponse.Client.ApiAbracadabraServicePopulatedb">
+            <summary>инициализация Бд</summary>
+            <returns>Success</returns>
+            <exception cref="T:WebApi.testResponse.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:WebApi.testResponse.Client.ApiAbracadabraServicePopulatedbAsync(System.Threading.CancellationToken)">
+            <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <summary>инициализация Бд</summary>
+            <returns>Success</returns>
+            <exception cref="T:WebApi.testResponse.ApiException">A server side error occurred.</exception>
+        </member>
+        <member name="M:WebApi.Controllers.OuizController.#ctor(WebApi.Services.IQuizService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:WebApi.Controllers.OuizController"/> class.
+            </summary>
+            <param name="quizService"> DI</param>
+        </member>
+        <member name="M:WebApi.Controllers.OuizController.QuestionsIds">
+            <summary>
+            Получить рандомные номера вопросов
+            </summary>
+            <returns>ArrayRandomQuIds</returns>
+            <response code="200">Возвращаем ответ</response>
+            <response code="400">Если 0</response>
+        </member>
+        <member name="M:WebApi.Controllers.OuizController.NextQuestion(System.Int32)">
+            <summary>
+            Следующий вопрос
+            </summary>
+            <remarks>
+            Пример запроса:
+            /Ouiz/next?questionId=1
+            </remarks>
+            <param name="questionId">id вопроса</param>
+            <returns>Возвращает вопрос</returns>
+            <response code="200">Возвращает Json</response>
+            <response code="400">Если 0</response>
+        </member>
+        <member name="M:WebApi.Controllers.OuizController.GetAnswer(System.String)">
+            <summary>
+            Принять ответ
+            </summary>
+            <remarks>
+            Пример запроса:
+            {'id':'1','Answer':"4"}
+            </remarks>
+            <param name="previousQuestionAnswer">{'Question':'2+2?','Answer':"4"}</param>
+            <returns>Возвращает bool </returns>
+            <response code="200">Возвращаем ответ</response>
+            <response code="400">Если 0</response>
+        </member>
+        <member name="M:WebApi.Controllers.OuizController.CompleteQuiz(System.String)">
+            <summary>
+            Возвращает % результат
+            </summary>
+            <param name="answers"> Пример [true, false, ...]</param>
+            <returns> % правильных ответов</returns>
+            <response code="200">Процент</response>
+            <response code="400">Если 0</response>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.Authenticate(WebApi.Models.User)">
+            <summary>
+            Авторизация
+            </summary>
+            <param name="userParam">Код доступа</param>
+            <returns>токен</returns>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.GetAll">
+            <summary>
+            Запрос пользователя
+            </summary>
+            <returns>возвращает имя пользователя</returns>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.PopulateDb">
+            <summary>
+            инициализация Бд
+            </summary>
+            <returns>200</returns>
+        </member>
+        <member name="T:WebApi.Expansion.CacheT`1">
+            <summary>
+            https://michaelscodingspot.com/cache-implementations-in-csharp-net/
+            </summary>
+            <typeparam name="TItem">Коллекция</typeparam>
+        </member>
+        <member name="M:WebApi.Expansion.CacheT`1.Get(System.Object,`0)">
+            <summary>
+            Метод Get для работы с коллекциями
+            </summary>
+            <param name="key"> Имя объекта</param>
+            <param name="item">Значение</param>
+            <returns>Коллекцию или false</returns>
+        </member>
+        <member name="T:WebApi.Expansion.ShuffleAlgorithm">
+            <summary>
+            Перемещать коллекцию используя алгоритм Фишера и Йейтса
+            https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+            https://stackoverflow.com/questions/273313/randomize-a-listt
+            </summary>
+        </member>
+        <member name="M:WebApi.Services.IQuizService.GetNextQuestion(System.Int32)">
+            <summary>
+            Возвращает вопрос с вариантами ответа в json
+            </summary>
+            <param name="questionId">Передает id вопроса</param>
+            <returns>JSON c вопросом и вариантами ответа</returns>
+        </member>
+        <member name="M:WebApi.Services.IQuizService.AnswerQuestion(System.String)">
+            <summary>
+            Проверяет предыдущий ответ
+            </summary>
+            <param name="json">передается ответ</param>
+            <returns>правильно или нет</returns>
+        </member>
+        <member name="M:WebApi.Services.IQuizService.CompleteQuiz(System.Boolean[])">
+            <summary>
+            Вызывается в конце приложения, сколько правильных ответов
+            </summary>
+            <param name="answers">массив ответов bool</param>
+            <returns>Возвращает %</returns>
+        </member>
+        <member name="M:WebApi.Services.QuizService.CreateJsonQuestion(WebApi.Models.Questions,System.String[])">
+            <summary>
+            Создаем Json для отправки на клиент
+            </summary>
+            <param name="question"> Вопрос</param>
+            <param name="answers">Список ответов для него </param>
+            <returns> Json</returns>
+        </member>
+        <member name="M:WebApi.Services.QuizService.AnswerQuestion(System.String)">
+            <summary>
+            Ответ, проверка на правильность
+            </summary>
+            <param name="json">Пример json {'Question':'2+2','Answer':"4"}</param>
+            <returns>Результат</returns>
+        </member>
+    </members>
+</doc>

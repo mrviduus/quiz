@@ -1,0 +1,30 @@
+
+
+
+<div class="container-fluid">
+    <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h3 *ngIf="question"> {{question}}</h3>
+            <p width = 48%;>Questions: {{leftQuestions}}/10</p>
+        </div>
+
+        <div class="modal-body">
+          <div *ngIf="variants" class="quiz" data-toggle="buttons">
+           <button [disabled] = "loading" class="element-animation1 btn btn-outline-info brBtn btn-block"(click)="getAnswer(variants[0])"><span><i class="glyphicon glyphicon-chevron-right"></i></span>{{variants[0]}}</button>
+           <button [disabled] = "loading" class="element-animation2 btn btn-outline-info brBtn btn-block"(click)="getAnswer(variants[1])"><span><i class="glyphicon glyphicon-chevron-right"></i></span>{{variants[1]}}</button>
+           <button [disabled] = "loading" class="element-animation3 btn btn-outline-info brBtn btn-block"(click)="getAnswer(variants[2])"><span><i class="glyphicon glyphicon-chevron-right"></i></span>{{variants[2]}}</button>
+           <button [disabled] = "loading" class="element-animation4 btn btn-outline-info brBtn btn-block"(click)="getAnswer(variants[3])"><span><i class="glyphicon glyphicon-chevron-right"></i></span>{{variants[3]}}</button>
+          </div>
+         </div>
+   <div *ngIf="loading">            
+      <p style="text-align: center;"><span class="spinner-border spinner-border-sm"></span>      Loading...</p>
+  </div>
+   <div class="modal-footer text-muted">
+      
+      <p *ngIf="time" width = 50%; style="float: left;"> Your time: {{time}}</p>
+      
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,11 @@
+﻿<div class="card mt-4">
+    <h4 class="card-header">Welcome to Test Quiz</h4>
+    <div class="card-body">
+        
+        <h6 *ngIf = "userName">Hello: <strong>{{userName}}</strong> </h6>
+        
+        
+        <button [disabled] = "!userName"  (click)='startQuiz()' class="btn btn-outline-info brBtn"><span *ngIf="!userName" class="spinner-border spinner-border-sm mr-1"></span>Start</button>
+        
+    </div>
+</div>

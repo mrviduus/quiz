@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="modal-dialog">
+      <div class="modal-content">
+         <div *ngIf="loading">
+            
+            <p style="text-align: center;"><span class="spinner-border spinner-border-sm"></span>       Loading...</p>
+            </div>
+         <div *ngIf="result" class="modal-header">     
+            <h3> Successfully completed, your result: {{result}} %</h3>
+         </div>
+        <div class="modal-body">
+            <p *ngIf="result">You' made {{mistakes}} mistakes in 10 questions</p>
+        </div>
+        <div class="modal-footer text-muted">     
+            <button (click) = "retry()" class="btn btn-outline-info brBtn">Retry</button>  
+        </div>
+
+</div>
+</div>
+</div>
